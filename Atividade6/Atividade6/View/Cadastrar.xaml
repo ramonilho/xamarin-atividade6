@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Atividade6.View.Cadastrar">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="StartAndExpand">
+            <Label Text="Data Cadastro" />
+            <Entry x:Name="dtCadastro" Placeholder="xx/xx/xxxx" />
+            
+            <Label Text="Data Entrega" />
+            <Entry x:Name="dtEntrega" Placeholder="xx/xx/xxxx"/>
+            
+            <Label Text="Tipo Avaliacao" />
+            <Entry x:Name="tipoAvaliacao" />
+
+            <Label Text="Descricao" />
+            <Entry x:Name="descricao" />
+
+            <Label Text="Nota" />
+            <Entry x:Name="valor"/>
+
+            <Button Text="Cadastrar" x:Name="btnCadastrar" Clicked="btnCadastrar_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Atividade6.View.NovaAtividadeView"
+              Title="Atividade">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Salvar" x:Name="btnSalvar" Command="{Binding OnAdicionarAtividadeCMD}" 
+                     CommandParameter="{Binding BindingContext, Source={x:Reference Name=rootAtividade}}" Order="Primary" Priority="1" />
+        <ToolbarItem Text="Cancelar" x:Name="btnCancelar" Command="{Binding OnSairCMD}" Order="Primary" Priority="2" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout x:Name="rootAtividade" Padding="7" BindingContext="{Binding Selecionado}">
+            <Label Text="Data Cadastro" />
+            <Entry x:Name="txtCadastro" Placeholder="Data Cadastro" Text="{Binding dtCadastro}" />
+            <Label Text="Data Entrega" />
+            <Entry x:Name="txtEntrega" Placeholder="Data Entrega" Text="{Binding dtEntrega}" />
+            <Label Text="Tipo de Avaliacao" />
+            <Entry x:Name="txtAvaliacao" Placeholder="Tipo de Avaliacao" Text="{Binding tipoAvaliacao}" />
+            <Label Text="Descricao" />
+            <Entry x:Name="txtDescricao" Placeholder="Descricao" Text="{Binding descricao}" />
+            <Label Text="Valor" />
+            <Entry x:Name="txtValor" Placeholder="Valor" Text="{Binding valor}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
